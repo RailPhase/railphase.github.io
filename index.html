@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <!-- Basic Page Needs
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta charset="utf-8">
+  <title>RailPhase</title>
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <!-- Mobile Specific Metas
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- CSS
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="css/prism.css">
+  <link rel="stylesheet" href="css/style.css">
+
+  <!-- Favicon
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link rel="icon" type="image/png" href="images/favicon.png">
+
+</head>
+<body>
+  <!-- Title Banner
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <div style="margin: 0px; padding: 0px; background: url(images/cover-bg.jpg); background-size: cover; background-position: center center;">
+    <div class="container text-center head-container">
+      <div class="title">
+        <h1 class="brand">Rail<span class="primary">Phase</span></h1>
+        <h2 class="subtitle" style="">The pragmatic web framework for .NET</h2>
+      </div>
+
+      <div class="nav">
+        <a href="#features">Overview</a>
+        <a href="#get-railphase">Download</a>
+        <a href="http://railphase.readthedocs.org/en/latest/">Documentation</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Introduction text
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <div class="container text-center" style="margin-top: 50px;">
+    <p class="large">
+      RailPhase is a modern web framework for .NET.
+      <br>
+      It borrows some of the concepts from other frameworks like <a href="http://rubyonrails.org/">Ruby on Rails</a>,
+      but gives you full control over the application without enforcing any design patterns.
+    </p>
+    <h2>RailPhase is…</h2>
+    <div class="row">
+      <div class="one-third column">
+        <a class="no-underline" href="http://railphase.readthedocs.org/en/latest/"><h4><i class="fa fa-check"></i> Documented</h4></a>
+      </div>
+      <div class="one-third column">
+        <a class="no-underline" href="https://travis-ci.org/LukasBoersma/RailPhase"><h4><i class="fa fa-check"></i> Tested</h4></a>
+      </div>
+      <div class="one-third column">
+        <a class="no-underline" href="https://raw.githubusercontent.com/LukasBoersma/RailPhase/master/LICENSE.txt"><h4><i class="fa fa-check"></i> Open-source (MIT license)</h4></a>
+      </div>
+    </div>
+
+
+    <hr>
+    <!-- Download overview
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <h2 id="get-railphase">Get RailPhase!</h2>
+    <div class="row">
+      <div class="twelve column service-link">
+        <h4 class="service-logo">
+          <a href="https://github.com/LukasBoersma/RailPhase/archive/master.zip">
+            <i class="fa fa-download"></i>&nbsp; Download source code
+          </a>
+        </h4>
+      </div>
+    </div>
+    <div class="row">
+      <div class="one-third column service-link">
+        <h4 class="service-logo">
+          <a href="https://github.com/LukasBoersma/RailPhase">
+            <i class="fa fa-github"></i>&nbsp; View on Github
+          </a>
+        </h4>
+      </div>
+      <div class="two-thirds column service-link">
+        <input class="copy-field" type="text" onClick="this.select();" value="git clone https://github.com/LukasBoersma/RailPhase">
+      </div>
+    </div>
+    <div class="row">
+      <div class="one-third column service-link">
+        <h4 class="service-logo">
+          <a href="http://www.nuget.org/packages/RailPhase/">
+            <i class="fa fa-cube"></i>&nbsp; Install from Nuget
+          </a>
+        </h4>
+      </div>
+      <div class="two-thirds column service-link">
+        <input class="copy-field" type="text" onClick="this.select();" value="Install-Package RailPhase">
+      </div>
+    </div>
+
+    <hr>
+    <!-- Feature Overview
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <h2 id="features">Features</h2>
+
+    <div class="text-left">
+      <h3>Familiar Model-View-Controller concept</h3>
+      <div class="row">
+        <div class="one-half column">
+          <p>
+            Have you worked with frameworks like Ruby on Rails, Django, or Sails.js before?
+            <br>
+            Then RailPhase will feel familiar to you.
+          </p>
+          <p>
+            In contrast to some other frameworks, you keep full control over the application architecture. Even the Model-View-Controller concept is optional.
+          </p>
+        </div>
+        <div class="one-half column">
+<pre class="language-csharp"><code>var app = new App();
+app.AddUrl("/", (request) => "Hello");
+app.Run();</code></pre>
+        </div>
+      </div>
+
+      <h3>Powerful template system</h3>
+      <div class="row">
+        <div class="one-half column">
+          <p>
+            RailPhase uses a template syntax compatible with Django's template system. Templates are precompiled into .NET code, resulting in extremely fast page rendering.
+          </p>
+          <p>
+            This separation of logic and content is optional: You can use full C# code in templates, and you also place content in your code files.
+          </p>
+        </div>
+        <div class="one-half column">
+<pre class="language-markup"><code>&lt;h1&gt;{{title}}&lt;/h1&gt;
+&lt;h2&gt;{{subtitle}}&lt;/h2&gt;
+&lt;div class="article-meta"&gt;
+Posted on {{date}}
+{% if has_author %}
+by {{author}}
+{% endif %}
+&lt;/div&gt;
+{{content}}</code></pre>
+        </div>
+      </div>
+
+      <h3>Entity Framework and LINQ</h3>
+      <div class="row">
+        <div class="one-half column">
+          <p>
+            RailPhase ships with a model system that is based on <a href="https://msdn.microsoft.com/en-us/data/ef.aspx">Entity Framework</a>, which means that it integrates well with other .NET libraries and allows you to use <a href="https://en.wikipedia.org/wiki/Language_Integrated_Query">LINQ</a> queries.
+          </p>
+        </div>
+        <div class="one-half column">
+<pre class="language-csharp"><code>posts = from article in Article.Objects
+        where article.Author == user
+        orderby article.Date
+        select article;</code></pre>
+        </div>
+      </div>
+    </div>
+    <hr>
+    <div class="row text-center" style="margin-bottom: 20px;">
+      <div class="twelve column">
+        <small>
+          © 2015 <a href="https://lukas-boersma.com">Lukas Boersma</a>
+          | <a href="https://lukas-boersma.com#contact">Impressum</a>
+          | <a href="http://www.disclaimer.de/disclaimer.htm">Disclaimer</a>
+          | <a href="mailto:mail@lukas-boersma.com">Contact: mail@lukas-boersma.com</a>
+        </small>
+      </div>
+      <div class="twelve column">
+        <small>
+          <a href="https://pixabay.com/de/schienen-titel-eisenbahn-transport-820000/">Source of the background image at the top</a>
+        </small>
+    </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/0.0.1/prism.min.js"></script>
+
+<!-- End Document
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+</body>
+</html>
